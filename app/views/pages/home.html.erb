@@ -1,0 +1,64 @@
+<ul id="menu">
+  <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+  <li data-menuanchor="secondPage"><a href="#secondPage">LinuxGit</a></li>
+  <li data-menuanchor="3rdPage"><a href="#3rdPage">Linux</a></li>
+  <li data-menuanchor="4thPage"><a href="#4thPage">Enjoy it</a></li>
+</ul>
+
+<div id="fullpage">
+  <div class="section" id="section0">
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+    <div class="intro">
+      <h1>LinuxGit</h1>
+      <p>An easy and new way to learn Linux & Ruby.</p>
+      <p>
+      <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+      </p>
+    </div>
+  </div>
+  <div class="section " id="section1">
+    <div class="intro">
+      <h1>LinuxGit</h1>
+      <p>An easy and new way to learn Linux & Ruby.</p>
+    </div>
+  </div>
+  <div class="section" id="section2">
+    <div class="slide" id="slide1">
+      <div class="intro">
+        <h1>Linux</h1>
+        <p>Talk is cheap, show me the code.</p>
+      </div>
+    </div>
+
+    <div class="slide" id="slide2">
+      <div class="intro">
+        <h1>Ruby</h1>
+        <p>Happy coding.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="section" id="section3">
+    <div class="intro">
+      <h1>Enjoy it</h1>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#fullpage').fullpage({
+anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+sectionsColor: ['white','#1bbc9b', '#4BBFC3', '#7BAABE'],
+navigation: true,
+navigationPosition: 'left',
+menu: '#menu'
+});
+      });
+</script>
