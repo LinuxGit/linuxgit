@@ -26,6 +26,12 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # authentication
 gem 'devise'
 
+# markdown
+gem 'redcarpet'
+
+# highlight
+gem 'pygments.rb'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
